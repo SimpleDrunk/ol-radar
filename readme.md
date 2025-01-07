@@ -4,7 +4,7 @@ This is an example control for using dynamic satellite radar images with OpenLay
 
 ## Demo Screenshot
 
-![Radar Image](src/ol-radar.png)
+![Radar Image](ol-radar.png)
 
 ## Usage Instructions
 
