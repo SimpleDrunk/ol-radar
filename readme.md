@@ -2,6 +2,10 @@
 
 This is an example control for using dynamic satellite radar images with OpenLayers, utilizing a free and open-source radar data source.
 
+## Demo Screenshot
+
+![Radar Image](src/ol-radar.png)
+
 ## Usage Instructions
 
 1. **Clone or Download the Project**:
