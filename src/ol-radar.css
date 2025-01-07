@@ -1,0 +1,16 @@
+.ol-radar-control {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	border-radius: 5px;
+	background: #fff;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	background-clip: padding-box;
+	
+	padding: 5px;
+	height: 67.5px;
+}
+
+.ol-radar-control .ol-radar-timestamp {
+	text-align: center;
+}

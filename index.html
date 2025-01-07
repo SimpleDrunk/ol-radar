@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OpenLayers Humanitarian OSM Map Example</title>
+    <link rel="stylesheet" href="https://lib.baomitu.com/ol3/4.6.5/ol.css" />
+    <script src="https://lib.baomitu.com/ol3/4.6.5/ol.js"></script>
+
+    <link rel="stylesheet" href="./src/ol-radar.css"></link>
+    <script src="./src/ol-radar.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .map {
+        height: 100vh;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map" class="map"></div>
+    <script type="text/javascript">
+      var map = new ol.Map({
+        target: "map",
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.XYZ({
+              url: "https://tile-{a-c}.openstreetmap.fr/hot/{z}/{x}/{y}.png",
+            }),
+          }),
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([-96.12, 33.37]), // 初始视图中心点，这里设置为经纬度 (0, 0)
+          zoom: 5, // 初始缩放级别
+        }),
+      });
+
+      var radar = new ol.control.Radar({
+        target: "map", // 指定雷达控件的目标元素
+        map: map, // 关联的地图对象
+        title: "you-radar-title", // 雷达控件的标题
+        zIndex: 100, // 控件的层级，决定其在地图上的显示顺序
+        opacity: 0.6, // 控件的透明度
+        transitionMs: 2000, // 数据切换的间渡时间（毫秒）
+      });
+      map.addControl(radar);
+    </script>
+  </body>
+</html>
